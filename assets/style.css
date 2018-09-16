@@ -1,0 +1,40 @@
+.jumbotron {
+
+
+    background-color: rgb(70, 115, 211);
+
+
+}
+
+.display-4 {
+
+    align-items: center;
+
+}
+
+#randGem {
+
+    margin-left: 25px;
+
+}
+
+#randGem1 {
+
+    float:left;
+    padding-right:10px;
+
+}
+
+#randGem2 {
+
+    float:left;
+    padding-right:10px;
+
+}
+
+#randGem3 {
+
+    float:left;
+    padding-right:10px;
+
+}
