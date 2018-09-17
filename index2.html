@@ -56,31 +56,35 @@
     
     $(document).ready(function() {
 
-        var totalCount=0;
-        var lossCount=0;
-        $("#lossCount").text(lossCount);
-        var winCount=0;
-        $("#winCount").text(winCount);
+        var totalCount = 0;
+        var lossCount = 0;
+        var winCount = 0;
 
         //randomly generated number for gem1
-        var randG1 = Math.floor(Math.random() * 11+1);
+        var randG1 = Math.floor(Math.random() * 13) +1;
 
         //randomly generated number for gem2
-        var randG2 = Math.floor(Math.random() * 11+1);
-
+        var randG2 = Math.floor(Math.random() * 13) +1;
 
         //randomly generated number for gem3
-        var randG3 = Math.floor(Math.random() * 11+1);
+        var randG3 = Math.floor(Math.random() * 13) +1;
 
         //randomly generated number for gem4
-        var randG4 = Math.floor(Math.random() * 11+1);
+        var randG4 = Math.floor(Math.random() * 13) +1;  
 
-        // test gem value here: 
         console.log(randG1, randG2, randG3, randG4);
-
+        
         //Gem Master's Random Number...
-        var random = Math.floor(Math.random()*101+19);
-        $('#randomNum').text(random);
+        function randomRange(min, max) {
+
+            return Math.floor(Math.random() * (max)) + min;
+
+        }
+
+        //...? does the following regenerate upon end of game ?...
+        var random = $("#randomNum").text(randomRange(19, 120));
+
+        console.log(random);
 
         //wrap all of the following gems into a function... 
         //call that function in the if statement... 
@@ -92,18 +96,22 @@
             totalCount = randG1 + totalCount;
             $("#count").text(totalCount);
 
-            if (totalCount === random) {
+
+        if (totalCount == random) {
 
             winCount++;
             $("#winCount").text(winCount);
-            reset()
+            totalCount = 0;
+
             }
 
             else if (totalCount > random) {
 
             lossCount++;
             $("#lossCount").text(lossCount);
-            reset()
+            totalCount = 0;
+
+
             }
 
         });
@@ -113,20 +121,23 @@
 
             totalCount = randG2 + totalCount;
             $("#count").text(totalCount);
-            
-            if (totalCount === random) {
 
-            winCount++;
-            $("#winCount").text(winCount);
-            reset()
-            }
+                  if (totalCount == random) {
 
-            else if (totalCount > random) {
+                winCount++;
+                $("#winCount").text(winCount);
+                totalCount = 0;
 
-            lossCount++;
-            $("#lossCount").text(lossCount);
-            reset()
-            }
+                }
+
+                else if (totalCount > random) {
+
+                lossCount++;
+                $("#lossCount").text(lossCount);
+                totalCount = 0;
+
+
+                }
 
         });
 
@@ -136,19 +147,22 @@
             totalCount = randG3 + totalCount;
             $("#count").text(totalCount);
 
-            if (totalCount === random) {
+                  if (totalCount == random) {
 
-            winCount++;
-            $("#winCount").text(winCount);
-            reset()
-            }
+                winCount++;
+                $("#winCount").text(winCount);
+                totalCount = 0;
 
-            else if (totalCount > random) {
+                }
 
-            lossCount++;
-            $("#lossCount").text(lossCount);
-            reset()
-            }
+                else if (totalCount > random) {
+
+                lossCount++;
+                $("#lossCount").text(lossCount);
+                totalCount = 0;
+
+
+                }
 
         });
 
@@ -158,43 +172,24 @@
             totalCount = randG4 + totalCount;
             $("#count").text(totalCount);
 
-            if (totalCount === random) {
+                  if (totalCount == random) {
 
-            winCount++;
-            $("#winCount").text(winCount);
-            reset()
-            }
+                winCount++;
+                $("#winCount").text(winCount);
+                totalCount = 0;
 
-            else if (totalCount > random) {
+                }
 
-            lossCount++;
-            $("#lossCount").text(lossCount);
-            reset()
-            }
+                else if (totalCount > random) {
+
+                lossCount++;
+                $("#lossCount").text(lossCount);
+                totalCount = 0;
+
+
+                }
 
         });
-
-        function reset() {
-
-        totalCount = 0;
-        $("#count").text(totalCount);
-        andG1 = Math.floor(Math.random() * 11+1);
-
-        //randomly generated number for gem2
-        randG2 = Math.floor(Math.random() * 11+1);
-
-        //randomly generated number for gem3
-        randG3 = Math.floor(Math.random() * 11+1);
-
-        //randomly generated number for gem4
-        randG4 = Math.floor(Math.random() * 11+1);
-
-        console.log(randG1, randG2, randG3, randG4);
-
-        random = Math.floor(Math.random()*101+19);
-        $('#randomNum').text(random);
-
-        }
 
     });
     
