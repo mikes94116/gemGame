@@ -5,3 +5,5 @@ Crystals Collector Game:
   clicked on a gem.
   The goal is to add up enough points to equal the points displayed by the computer's random pick at the start of the game... if you go 
   over, however, you loose. 
+  
+ Access it here: https://mikes94116.github.io/gemGame/
