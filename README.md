@@ -10,4 +10,6 @@ Crystals Collector Game:
   
  To run it, simply access it here: https://mikes94116.github.io/gemGame/
  
+ ![](https://raw.githubusercontent.com/mikes94116/gemGame/master/gemGame%20Screenshot.png?raw=true)
+ 
  
